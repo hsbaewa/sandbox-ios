@@ -28,6 +28,7 @@ jobs:
           TEST_FILE: ${{secrets.TEST_JSON_FILE}}
         run: |
           echo "$TEST_FILE"
+          echo "$TEST_FILE" > test.json
       - name: Build
         env:
           scheme: ${{ 'default' }}
