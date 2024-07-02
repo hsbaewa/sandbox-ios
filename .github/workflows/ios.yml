@@ -23,6 +23,11 @@ jobs:
       - name: install cocoapods
         run: |
           pod install
+      - name: create test file
+        env:
+          TEST_FILE: ${{secret.TEST_JSON_FILE}}
+        run: |
+          echo "$TEST_FILE"
       - name: Build
         env:
           scheme: ${{ 'default' }}
