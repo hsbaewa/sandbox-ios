@@ -25,7 +25,7 @@ jobs:
           pod install
       - name: create test file
         env:
-          TEST_FILE: ${{secret.TEST_JSON_FILE}}
+          TEST_FILE: ${{secrets.TEST_JSON_FILE}}
         run: |
           echo "$TEST_FILE"
       - name: Build
